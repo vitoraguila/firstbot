@@ -6,6 +6,8 @@ gem "sinatra-activerecord"
 gem 'pg', '~> 0.18'
 gem 'rake'
 
+gem 'pg_search'
+
 group :development do
  gem "tux"
 end
