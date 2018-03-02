@@ -1,13 +1,13 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (5.1.4)
-      activesupport (= 5.1.4)
-    activerecord (5.1.4)
-      activemodel (= 5.1.4)
-      activesupport (= 5.1.4)
+    activemodel (5.1.5)
+      activesupport (= 5.1.5)
+    activerecord (5.1.5)
+      activemodel (= 5.1.5)
+      activesupport (= 5.1.5)
       arel (~> 8.0)
-    activesupport (5.1.4)
+    activesupport (5.1.5)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
       minitest (~> 5.1)
@@ -20,15 +20,19 @@ GEM
     factory_bot (4.8.2)
       activesupport (>= 3.0.0)
     ffaker (2.8.1)
-    i18n (0.9.4)
+    i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     minitest (5.11.3)
-    mustermann (1.0.1)
+    mustermann (1.0.2)
     pg (0.21.0)
+    pg_search (2.1.2)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      arel (>= 6)
     rack (2.0.4)
-    rack-protection (2.0.0)
+    rack-protection (2.0.1)
       rack
-    rack-test (0.8.2)
+    rack-test (0.8.3)
       rack (>= 1.0, < 3)
     rake (12.3.0)
     ripl (0.7.1)
@@ -52,10 +56,10 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
-    sinatra (2.0.0)
+    sinatra (2.0.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.0)
+      rack-protection (= 2.0.1)
       tilt (~> 2.0)
     sinatra-activerecord (2.0.13)
       activerecord (>= 3.2)
@@ -79,6 +83,7 @@ DEPENDENCIES
   factory_bot
   ffaker
   pg (~> 0.18)
+  pg_search
   rack-test
   rake
   rspec

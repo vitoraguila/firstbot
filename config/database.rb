@@ -20,13 +20,16 @@ set :database, {
 }
 end
 
+
 configure :production do
+  db = URI.parse(ENV['DATABASE_URL'] || 'postgres:///postgres/onebitbot_production')
+
   set :database, {
-    adapter: 'postgresql',
-    encoding: 'utf8',
-    database: 'firstbot_production',
-    pool: 5,
-    username: 'postgres',
-    host: 'postgres'
+    adapter:  db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+    host:     db.host,
+    username: db.user,
+    password: db.password,
+    database: db.path[1..-1],
+    encoding: 'utf8'
   }
 end
