@@ -24,7 +24,22 @@ class App < Sinatra::Base
     {
       "speech": response,
       "displayText": response,
-      "source": "Slack"
+      "source": "Slack",
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"Try the postback button!",
+            "buttons":[
+              {
+                "type":"postback",
+                "title":"Postback Button",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+              }
+            ]
+          }
+        }
     }.to_json
   end
 end
