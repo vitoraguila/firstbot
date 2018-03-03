@@ -24,15 +24,7 @@ class App < Sinatra::Base
     {
       "speech": response,
       "displayText": response,
-      "source": "Slack",
-      'messages':
-      [
-        {
-          'url': 'http://www.uol.com.br',
-          'type': 'web_url',
-          'title': 'teste btn'
-        }
-      ],
+      "source": "Slack"
     }.to_json
   end
 end
