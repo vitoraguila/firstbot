@@ -27,12 +27,12 @@ class App < Sinatra::Base
       "source": "Slack",
       'messages': 
       [
-       {'title': 'when',
-        'replies': ['12:00',
-                    '13:00',
-                    '17:00',
-                    '18:00'],
-        'type': 2}],      
+       {
+        'type': 'postback',
+        'title': 'Acesso agora',
+        'payload': 'http://www.uol.com.br'
+       }
+      ],      
     }.to_json
   end
 end
