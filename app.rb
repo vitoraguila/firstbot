@@ -25,22 +25,14 @@ class App < Sinatra::Base
       "speech": response,
       "displayText": response,
       "source": "Slack",
-      "message":{
-        "attachment":{
-          "type":"template",
-          "payload":{
-            "template_type":"button",
-            "text":"Try the postback button!",
-            "buttons":[
-              {
-                "type":"postback",
-                "title":"Postback Button",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
-              }
-            ]
-          }
-        }
-      }
+      'messages': 
+      [
+       {'title': 'when',
+        'replies': ['12:00',
+                    '13:00',
+                    '17:00',
+                    '18:00'],
+        'type': 2}],      
     }.to_json
   end
 end
