@@ -22,9 +22,17 @@ class App < Sinatra::Base
 
     content_type :json
     {
-      "type": "web_url",
-      "url": "http://www.uol.com.br",
-      "title": "Ver site",
+      "speech": response,
+      "displayText": response,
+      "source": "Slack",
+      'messages':
+      [
+        {
+          'url': 'http://www.uol.com.br',
+          'type': 'web_url',
+          'title': 'teste btn'
+        }
+      ],
     }.to_json
   end
 end
