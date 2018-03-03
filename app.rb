@@ -40,6 +40,7 @@ class App < Sinatra::Base
             ]
           }
         }
+      }
     }.to_json
   end
 end
