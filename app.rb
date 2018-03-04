@@ -24,34 +24,7 @@ class App < Sinatra::Base
     {
       "speech": response,
       "displayText": response,
-      "source": "Slack",
-      "message": {
-                    "attachment": {
-                            "type": "template",
-                            "payload": {
-                                  "template_type": "generic",
-                                  "elements": [
-                                          {
-                                            "title": "teste",
-                                            "image_url": "http://www.hotelflordeminas.com.br/cache/3.png",
-                                            "subtitle": "teste subtitulo"
-                                          }
-                                  ]
-                            }
-                    },
-                    "quick_repliers": [
-                            {
-                              "content_type": "text",
-                              "title": "resposta 1",
-                              "payload": "reply1"
-                            },
-                            {
-                              "content_type": "text",
-                              "title": "resposta 2",
-                              "payload": "reply2"
-                            }
-                    ]
-      }
+      "source": "Slack"
     }.to_json
   end
 end
