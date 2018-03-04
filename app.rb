@@ -22,20 +22,9 @@ class App < Sinatra::Base
 
     content_type :json
     {
-      "attachment": {
-        "type": 'template',
-        "payload": {
-          "template_type": 'button',
-          "text": response,
-          "buttons": [
-            {
-              "type": 'web_url',
-              "url": "http://www.uol.com.br",
-              "title": 'Choose from list'
-            }
-          ]
-        }
-      }
+      "speech": response,
+      "displayText": response,
+      "source": "Slack"
     }.to_json
   end
 end
