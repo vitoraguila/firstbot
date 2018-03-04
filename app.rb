@@ -22,8 +22,8 @@ class App < Sinatra::Base
 
     content_type :json
     {
-      "speech": "response",
-      "displayText": "response",
+      "speech": response,
+      "displayText": response,
       "source": "Slack",
       "message": {
                     "attachment": {
@@ -38,7 +38,19 @@ class App < Sinatra::Base
                                           }
                                   ]
                             }
-                    }
+                    },
+                    "quick_repliers": [
+                            {
+                              "content_type": "text",
+                              "title": "resposta 1",
+                              "payload": "reply1"
+                            },
+                            {
+                              "content_type": "text",
+                              "title": "resposta 2",
+                              "payload": "reply2"
+                            }
+                    ]
       }
     }.to_json
   end
