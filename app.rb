@@ -24,7 +24,8 @@ class App < Sinatra::Base
     {
       "speech": response,
       "displayText": response,
-      "source": "Slack"
+      "source": "Slack",
+      "imageUrl": "http://www.hotelflordeminas.com.br/cache/4.png"
     }.to_json
   end
 end
