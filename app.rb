@@ -22,10 +22,22 @@ class App < Sinatra::Base
 
     content_type :json
     {
-      "speech": response,
-      "displayText": response,
-      "source": "Slack",
-      "imageUrl": "http://www.hotelflordeminas.com.br/cache/4.png"
+      "attachment": {
+        "type": 'template',
+        "payload": {
+          "template_type": 'button',
+          "text": response,
+          "buttons": [
+            {
+              "type": 'web_url',
+              "url": "http://www.uol.com.br",
+              "title": 'Choose from list'
+            }
+          ]
+        }
+      }
     }.to_json
   end
 end
+
+
