@@ -22,10 +22,24 @@ class App < Sinatra::Base
 
     content_type :json
     {
-      "type": "postback",
-      "title": "teste",
-      "payload": "teste"
-    }
+      "speech": "response",
+      "displayText": "response",
+      "source": "Slack",
+      "message": {
+                    "attachment": {
+                            "type": "template",
+                            "payload": {
+                                  "template_type": "generic",
+                                  "elements": [
+                                          {
+                                            "title": "teste",
+                                            "image_url": "http://www.hotelflordeminas.com.br/cache/3.png",
+                                            "subtitle": "teste subtitulo"
+                                          }
+                                  ]
+                            }
+                    }
+      }
+    }.to_json
   end
 end
-
